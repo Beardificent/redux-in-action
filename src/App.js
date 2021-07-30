@@ -1,4 +1,4 @@
-import { createTask, editTask, fetchTasks } from "actions";
+import { createTask, editTask, fetchTasks } from "store/actions";
 import FlashMessage from "components/FlashMessage";
 import React, { Component } from "react";
 import { connect } from "react-redux";

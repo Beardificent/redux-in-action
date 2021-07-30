@@ -40,9 +40,10 @@ class TasksPage extends Component {
   };
   renderTaskLists() {
     const { tasks } = this.props;
+    console.log(tasks);
     return TASK_STATUSES.map((status) => {
-      const statusTasks = tasks.filter((task) => task.status === status);
-      return (
+      const statusTasks = tasks && tasks.filter(task => task.status === status);
+      return (statusTasks && 
         <TaskList
           key={status}
           status={status}
@@ -65,11 +66,11 @@ class TasksPage extends Component {
               style={{
                 display: "flex",
                 flexDirection: "row",
-                justifyContent: "space-between",
+                justifyContent: "space-around",
                 margin: "1rem",
               }}
             >
-              <h1>Tasks</h1>
+              <h1>Avocado To-Do List</h1>
               <Button
                 variant="contained"
                 color="primary"

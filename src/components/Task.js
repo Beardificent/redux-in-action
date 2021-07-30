@@ -5,9 +5,14 @@ const TASK_STATUSES = ["Unstarted", "In Progress", "Completed"];
 
 const Task = (props) => {
   return (
-    <Grid container xs={12}>
+    <Grid container>
       <Paper
-        style={{ width: "20%", padding: "1rem", margin: "1rem", backgroundColor: "green" }}
+        style={{
+          width: "20%",
+          padding: "1rem",
+          margin: "1rem",
+          backgroundColor: "green",
+        }}
         className="task"
       >
         <select value={props.task.status} onChange={onStatusChange}>
@@ -18,16 +23,28 @@ const Task = (props) => {
           ))}
         </select>
         <div className="task-header">
-          <Grid item style={{ display: "flex", flexDirection: "row" }}>
-            <label style={{fontWeight: "bold", margin: "0 0.625rem 0 0", color: "white" }}>
+          <Grid item xs={12} style={{ display: "flex", flexDirection: "row" }}>
+            <label
+              style={{
+                fontWeight: "bold",
+                margin: "0 0.625rem 0 0",
+                color: "white",
+              }}
+            >
               title:
             </label>
             <div> {props.task.title}</div>
           </Grid>
         </div>
         <Grid container>
-          <Grid item style={{ display: "flex", flexDirection: "row" }}>
-            <label style={{ fontWeight: "bold", margin: "0 0.625rem 0 0", color: "white" }}>
+          <Grid item xs={12} style={{ display: "flex", flexDirection: "row" }}>
+            <label
+              style={{
+                fontWeight: "bold",
+                margin: "0 0.625rem 0 0",
+                color: "white",
+              }}
+            >
               content:{" "}
             </label>
             <div className="task-body">{props.task.description}</div>
