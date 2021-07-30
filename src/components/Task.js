@@ -5,7 +5,7 @@ const TASK_STATUSES = ["Unstarted", "In Progress", "Completed"];
 
 const Task = (props) => {
   return (
-    <Grid container xs={12}>
+    <Grid container>
       <Paper
         style={{ width: "20%", padding: "1rem", margin: "1rem", backgroundColor: "green" }}
         className="task"

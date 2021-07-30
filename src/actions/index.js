@@ -45,10 +45,10 @@ export function fetchTasks() {
     api
       .fetchTasks()
       .then((response) => {
-        //setTimeout(() => {
-        //dispatch(fetchTasksSucceeded(response.data));
-        // }, 1000);
-        throw new Error("Unable to fetch tasks");
+        setTimeout(() => {
+        dispatch(fetchTasksSucceeded(response.data));
+        }, 1000);
+       // throw new Error("Unable to fetch tasks");
       })
       .catch((error) => {
         dispatch(fetchTasksFailed(error.message));
